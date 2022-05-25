@@ -46,7 +46,7 @@
                                     <option value="Restricted">Restricted business</option>
                                     <option value="Other">Other</option>
                                 </select>
-                                <input type="text" name="number" onkeyup="startSavePhonebookForm(event)">
+                                <input type="text" name="number" onkeyup="startSavePhonebookForm(event)" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                                 <span class="clearfix"></span>
                                 <span class="error"></span>
                                 <img src="assets/images/delete_white.svg" alt="" onclick="deleteNumber(event)">
