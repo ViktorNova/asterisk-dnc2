@@ -241,9 +241,7 @@ function savePhonebookForm() {
         labels[i].getElementsByClassName('error')[0].style.display = 'none';
 
         if (labels[i].getElementsByTagName('select')[0].value === '') {
-            labels[i].getElementsByClassName('error')[0].innerHTML = 'Please select the phone type';
-            labels[i].getElementsByClassName('error')[0].style.display = 'block';
-            has_error = true;
+            labels[i].getElementsByTagName('select')[0].value = 'Unspecified';
         }
 
         if (labels[i].getElementsByTagName('input')[0].value === '') {
