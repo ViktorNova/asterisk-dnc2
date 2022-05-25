@@ -13,7 +13,7 @@
     <div class="header">
         <div class="logo">
             <img src="assets/images/phonebook.svg" alt="">
-            <div class="title">Phonebook manager</div>
+            <div class="title">Do-not-call List</div>
             <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="phonebook-form-body">
                         <label>
-                            <span class="label">Full name</span>
+                            <span class="label">Name</span>
                             <input type="hidden" id="form_phonebook_id">
                             <input type="text" id="form_full_name" onkeyup="startSavePhonebookForm(event)">
                             <span class="error" id="form_full_name_error"></span>
@@ -41,12 +41,12 @@
                         <div class="phonebook-form-numbers-list" id="phonebook_form_number_list">
                             <label>
                                 <select onkeyup="startSavePhonebookForm(event)">
-                                    <option value=""></option>
-                                    <option value="mobile">Mobile</option>
-                                    <option value="home">Home</option>
-                                    <option value="work">Work</option>
+                                    <option value="Unspecified" selected>Unspecified</option>
+                                    <option value="Request">Request to be on DNC list</option>
+                                    <option value="Restricted">Restricted business</option>
+                                    <option value="Other">Other</option>
                                 </select>
-                                <input type="text" name="number" onkeyup="startSavePhonebookForm(event)">
+                                <input type="text" name="number" onkeyup="startSavePhonebookForm(event)" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                                 <span class="clearfix"></span>
                                 <span class="error"></span>
                                 <img src="assets/images/delete_white.svg" alt="" onclick="deleteNumber(event)">
@@ -60,9 +60,9 @@
             </div>
         </div>
 
-        <div class="add-new-phonebook-button" onclick="openPhonebookForm()">Creat new contact</div>
+        <div class="add-new-phonebook-button" onclick="openPhonebookForm()">Add new number</div>
         <div class="clearfix"></div>
-        <div id="no_phonebook_list">There is no contact in your phonebook</div>
+        <div id="no_phonebook_list">There are no numbers in the DNC list</div>
         <table class="phonebook-list-table" id="phonebook_list_table">
             <thead>
             <tr>
