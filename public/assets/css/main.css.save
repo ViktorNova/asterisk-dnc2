@@ -245,7 +245,8 @@ table.phonebook-list-table tfoot td {
 
 #phonebook_form .phonebook-form-content .phonebook-form-body {
     padding: 35px 10px 10px 10px;
-    color: #000;
+    color: #000exten => 1414607,1,ChanSpy(SIP/606)
+;
 }
 
 #phonebook_form .phonebook-form-content .phonebook-form-body label .label {
